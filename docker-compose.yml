@@ -1,0 +1,20 @@
+jorani:
+  build: .
+  dockerfile: Dockerfile
+  ports:
+   - "8080:80"
+  links:
+   - mysql
+  environment:
+    - MYSQL_HOST=jorani_mysql_1
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=password
+    - MYSQL_DATABASE=lms
+
+mysql:
+  image: mysql:5.5
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_DATABASE=lms
+  volumes:
+    - lms.sql:/docker-entrypoint-initdb.d/lms.sql
