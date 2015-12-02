@@ -2,7 +2,7 @@ NAME=jorani
 VERSION ?= latest
 .PHONY: all build
 
-all: clean build run
+all: stop clean build run
 
 clean:
 	@echo ">>> Delete jorani images"
@@ -15,3 +15,7 @@ build:
 run:
 	@echo ">>> docker run"
 	@docker-compose up
+
+stop:
+	@echo ">>> docker run"
+	@docker-compose kill
