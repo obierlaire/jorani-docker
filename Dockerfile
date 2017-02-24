@@ -12,6 +12,7 @@ RUN mv /jorani-0.4.3 /var/www/html/
 RUN a2enmod rewrite
 COPY 000-default.conf /etc/apache2/sites-enabled/000-default.conf
 COPY database.php /var/www/html/application/config/database.php
+COPY email.php /var/www/html/application/config/email.php
 # Configure Apache2
 ENV APACHE_RUN_USER     www-data
 ENV APACHE_RUN_GROUP    www-data

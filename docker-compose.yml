@@ -10,6 +10,11 @@ jorani:
     - MYSQL_USER=root
     - MYSQL_PASSWORD=password
     - MYSQL_DATABASE=lms
+    - SMTP_HOST=email-smtp.eu-west-1.amazonaws.com
+    - SMTP_USER=AKIAJ3CU33URUZYSJF5A
+    - SMTP_PASSWORD=AiQHsVtEjE3Ypq9kd62D9LnOrTUsxDNDiVE65yIb57Mo
+    - SMTP_PORT=25
+    - SMTP_CRYPTO=tls
 
 mysql:
   image: mysql:5.5
